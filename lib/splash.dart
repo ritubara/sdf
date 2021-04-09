@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
 
+import 'user/login.dart';
+
 class splash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -20,13 +22,16 @@ class Splash2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return SplashScreen(
       seconds: 5,
-      navigateAfterSeconds: new SecondScreen(),
-      title: new Text(
-        'ApnaLab',
+      navigateAfterSeconds: Login(),
+      title: Text(
+        'ALab',
         textScaleFactor: 2,
       ),
-      image: new Image.network(
-          'https://www.geeksforgeeks.org/wp-content/uploads/gfg_200X200.png'),
+      image: Image.asset(
+        'images/loginscreen.jpg',
+        width: 450,
+        height: 300,
+      ),
       loadingText: Text("Loading"),
       photoSize: 100.0,
       loaderColor: Colors.teal,
